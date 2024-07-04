@@ -10,7 +10,6 @@ WORKDIR /home/host
 ENV PATH="$PATH:/home/host/.local/bin"
 
 COPY ./requirements.txt .
-ENV PIP_INDEX_URL=https://pypi.k.avito.ru/pypi/
 RUN pip install -r ./requirements.txt
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
